@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Factor Landing Preview</title>
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom accent colors */
+    .accent-magenta { --tw-border-opacity:1; border-color:rgba(255,0,204,var(--tw-border-opacity)); }
+    .text-magenta { color: #FF00CC; }
+    .text-teal    { color: #00CFFF; }
+    .hover\:magenta-glow:hover { box-shadow: 0 0 8px rgba(255,0,204,0.6); }
+    .hover\:teal-glow:hover    { box-shadow: 0 0 8px rgba(0,207,255,0.6); }
+  </style>
+</head>
+<body class="bg-black text-white min-h-screen flex flex-col items-center">
+
+  <!-- Hero -->
+  <div class="pt-16 text-center">
+    <h1 class="text-6xl font-extrabold mb-4">FACTOR</h1>
+    <p class="text-xl mb-8">Create. Showcase. Sell.</p>
+    <button
+      class="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-black transition"
+    >Get Started</button>
+  </div>
+
+  <!-- Features Grid -->
+  <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-4xl px-4">
+    <!-- Sample of the Week -->
+    <div class="flex items-start p-6 bg-neutral-900 rounded-lg border border-white hover:magenta-glow transition">
+      <div class="h-6 w-6 mr-4 text-magenta">🎧</div>
+      <div>
+        <h2 class="text-xl font-semibold mb-1">Sample of the Week</h2>
+        <p class="text-neutral-400">Download, remix, submit!</p>
+      </div>
+    </div>
+    <!-- Trending Tracks -->
+    <div class="flex items-start p-6 bg-neutral-900 rounded-lg border border-white hover:teal-glow transition">
+      <div class="h-6 w-6 mr-4 text-teal">🎶</div>
+      <div>
+        <h2 class="text-xl font-semibold mb-1">Trending Tracks</h2>
+        <p class="text-neutral-400">What everyone's listening to.</p>
+      </div>
+    </div>
+    <!-- Collab Spotlight -->
+    <div class="flex items-start p-6 bg-neutral-900 rounded-lg border border-white hover:magenta-glow transition">
+      <div class="h-6 w-6 mr-4 text-magenta">🤝</div>
+      <div>
+        <h2 class="text-xl font-semibold mb-1">Community Collab Spotlight</h2>
+        <p class="text-neutral-400">Before & after remixes.</p>
+      </div>
+    </div>
+    <!-- Editor’s Picks -->
+    <div class="flex items-start p-6 bg-neutral-900 rounded-lg border border-white hover:teal-glow transition">
+      <div class="h-6 w-6 mr-4 text-teal">🎨</div>
+      <div>
+        <h2 class="text-xl font-semibold mb-1">Editor’s Picks</h2>
+        <p class="text-neutral-400">Top art + sound pairings.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
