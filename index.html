@@ -3,62 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Factor Landing Preview</title>
+  <title>Factor — Create. Showcase. Sell.</title>
   <!-- Tailwind via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Custom accent colors */
-    .accent-magenta { --tw-border-opacity:1; border-color:rgba(255,0,204,var(--tw-border-opacity)); }
-    .text-magenta { color: #FF00CC; }
-    .text-teal    { color: #00CFFF; }
-    .hover\:magenta-glow:hover { box-shadow: 0 0 8px rgba(255,0,204,0.6); }
-    .hover\:teal-glow:hover    { box-shadow: 0 0 8px rgba(0,207,255,0.6); }
+    /* Tailwind Customization */
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            magenta: '#FF00CC',
+            teal:    '#00CFFF',
+          },
+          backgroundImage: {
+            'hero-gradient': 'linear-gradient(135deg, #111111 0%, #1a1a1a 50%, #111111 100%)',
+          }
+        }
+      }
+    };
   </style>
 </head>
-<body class="bg-black text-white min-h-screen flex flex-col items-center">
+<body class="bg-hero-gradient text-white min-h-screen flex flex-col items-center justify-center">
 
-  <!-- Hero -->
-  <div class="pt-16 text-center">
-    <h1 class="text-6xl font-extrabold mb-4">FACTOR</h1>
-    <p class="text-xl mb-8">Create. Showcase. Sell.</p>
-    <button
-      class="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-black transition"
-    >Get Started</button>
+  <!-- Hero Section -->
+  <div class="text-center px-6 py-20 space-y-6">
+    <!-- Logo / Title -->
+    <h1 class="text-6xl font-extrabold tracking-tight bg-clip-text text-transparent 
+               bg-gradient-to-r from-magenta to-teal drop-shadow-lg">
+      FACTOR
+    </h1>
+    <!-- Tagline -->
+    <p class="text-xl text-neutral-300 max-w-xl mx-auto">
+      Create. Showcase. Sell.
+    </p>
+    <!-- Get Started Button -->
+    <button class="px-10 py-4 font-semibold text-black bg-white rounded-full 
+                   shadow-2xl hover:shadow-[0_10px_30px_rgba(255,255,255,0.3)] 
+                   transform hover:-translate-y-1 transition-all">
+      Get Started
+    </button>
   </div>
 
-  <!-- Features Grid -->
-  <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-4xl px-4">
+  <!-- Features Grid (Clean, Aligned) -->
+  <div class="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 gap-8 px-6 pb-20">
     <!-- Sample of the Week -->
-    <div class="flex items-start p-6 bg-neutral-900 rounded-lg border border-white hover:magenta-glow transition">
-      <div class="h-6 w-6 mr-4 text-magenta">🎧</div>
-      <div>
-        <h2 class="text-xl font-semibold mb-1">Sample of the Week</h2>
-        <p class="text-neutral-400">Download, remix, submit!</p>
+    <div class="flex flex-col items-start p-6 bg-white/5 backdrop-blur-md rounded-xl border border-white/20
+                hover:bg-white/10 hover:border-magenta transition cursor-pointer space-y-4">
+      <div class="p-2 bg-magenta rounded-lg shadow-lg">
+        🎧
       </div>
+      <h2 class="text-2xl font-bold">Sample of the Week</h2>
+      <p class="text-neutral-400">Download, remix, submit!</p>
     </div>
+
     <!-- Trending Tracks -->
-    <div class="flex items-start p-6 bg-neutral-900 rounded-lg border border-white hover:teal-glow transition">
-      <div class="h-6 w-6 mr-4 text-teal">🎶</div>
-      <div>
-        <h2 class="text-xl font-semibold mb-1">Trending Tracks</h2>
-        <p class="text-neutral-400">What everyone's listening to.</p>
+    <div class="flex flex-col items-start p-6 bg-white/5 backdrop-blur-md rounded-xl border border-white/20
+                hover:bg-white/10 hover:border-teal transition cursor-pointer space-y-4">
+      <div class="p-2 bg-teal rounded-lg shadow-lg">
+        🎶
       </div>
+      <h2 class="text-2xl font-bold">Trending Tracks</h2>
+      <p class="text-neutral-400">What everyone’s listening to.</p>
     </div>
-    <!-- Collab Spotlight -->
-    <div class="flex items-start p-6 bg-neutral-900 rounded-lg border border-white hover:magenta-glow transition">
-      <div class="h-6 w-6 mr-4 text-magenta">🤝</div>
-      <div>
-        <h2 class="text-xl font-semibold mb-1">Community Collab Spotlight</h2>
-        <p class="text-neutral-400">Before & after remixes.</p>
+
+    <!-- Community Collab Spotlight -->
+    <div class="flex flex-col items-start p-6 bg-white/5 backdrop-blur-md rounded-xl border border-white/20
+                hover:bg-white/10 hover:border-magenta transition cursor-pointer space-y-4">
+      <div class="p-2 bg-magenta rounded-lg shadow-lg">
+        🤝
       </div>
+      <h2 class="text-2xl font-bold">Community Collab Spotlight</h2>
+      <p class="text-neutral-400">Before & after remixes.</p>
     </div>
+
     <!-- Editor’s Picks -->
-    <div class="flex items-start p-6 bg-neutral-900 rounded-lg border border-white hover:teal-glow transition">
-      <div class="h-6 w-6 mr-4 text-teal">🎨</div>
-      <div>
-        <h2 class="text-xl font-semibold mb-1">Editor’s Picks</h2>
-        <p class="text-neutral-400">Top art + sound pairings.</p>
+    <div class="flex flex-col items-start p-6 bg-white/5 backdrop-blur-md rounded-xl border border-white/20
+                hover:bg-white/10 hover:border-teal transition cursor-pointer space-y-4">
+      <div class="p-2 bg-teal rounded-lg shadow-lg">
+        🎨
       </div>
+      <h2 class="text-2xl font-bold">Editor’s Picks</h2>
+      <p class="text-neutral-400">Top art + sound pairings.</p>
     </div>
   </div>
 
